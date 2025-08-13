@@ -4,6 +4,8 @@ const conteudo = document.querySelector('.conteudo');
 const background = document.querySelector('.background');
 const menuLinks = document.querySelectorAll('.menu-link');
 const secoesConteudo = document.querySelectorAll('.secao-conteudo');
+const filtroToggle = document.getElementById('filtro-toggle');
+const filtros = document.getElementById('filtros');
 
 botao.addEventListener('click', () => {
     menuLateral.classList.toggle('ativo');
@@ -48,4 +50,9 @@ menuLinks.forEach(link => {
         document.body.style.backgroundColor = '#ecf0f1';
         conteudo.style.backgroundColor = '#ecf0f1';
     });
+});
+
+// Nova lógica para o botão de filtro
+filtroToggle.addEventListener('click', () => {
+    filtros.classList.toggle('ativo');
 });
