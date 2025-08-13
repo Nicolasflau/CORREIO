@@ -308,3 +308,69 @@ body {
     line-height: 1.6;
     margin-bottom: 15px;
 }
+/* ---------------------------------------------------------
+    Estilos Responsivos - Aplicados em Telas de até 768px
+    ---------------------------------------------------------
+*/
+
+@media (max-width: 768px) {
+    /* Ajustes no Menu Lateral */
+    .menu-lateral {
+        width: 80%; /* Ocupa 80% da tela em vez de 300px fixos */
+        left: -80%; /* Esconde o menu fora da tela */
+    }
+
+    .menu-lateral.ativo {
+        left: 0; /* Mostra o menu na tela */
+    }
+    
+    /* Posição do Botão de Menu */
+    .botao-menu {
+        left: 20px; /* Mantém a posição original */
+        transition: left 0.5s ease; /* Adiciona a transição ao botão */
+    }
+
+    .botao-menu.ativo {
+        left: calc(80% - 70px); /* Ajusta a posição do botão para a nova largura do menu */
+    }
+
+    /* Ajustes no Conteúdo */
+    .conteudo {
+        margin-left: 0; /* Remove a margem esquerda fixa */
+        padding: 20px;
+    }
+
+    .conteudo.ativo {
+        margin-left: 0; /* O conteúdo não se move */
+        background-color: var(--text-color);
+        color: var(--text-secondary-color);
+    }
+    
+    .background.ativo {
+        visibility: visible; /* Mantém o overlay escuro ativo */
+        opacity: 1;
+    }
+
+    /* Ajustes nos Títulos e Parágrafos */
+    .conteudo h1 {
+        font-size: 40px; /* Reduz o tamanho do título principal */
+    }
+
+    .conteudo h2 {
+        font-size: 32px; /* Reduz o tamanho dos subtítulos */
+    }
+
+    .conteudo p {
+        font-size: 16px; /* Reduz o tamanho dos parágrafos */
+    }
+
+    /* Ajustes nos Contêineres de Formulário, Pesquisa, etc. */
+    .form-container,
+    .search-container,
+    .qrcode-container,
+    .info-container {
+        padding: 15px; /* Diminui o preenchimento interno */
+        margin: 20px auto; /* Diminui a margem externa */
+        max-width: 95%; /* Usa quase a largura total da tela */
+    }
+}
