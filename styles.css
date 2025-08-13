@@ -217,14 +217,21 @@ body {
     background-color: var(--background-color);
 }
 
-#campo-pesquisa {
+.search-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
     width: 100%;
-    padding: 15px;
+    margin-bottom: 20px;
+}
+
+#campo-pesquisa {
+    flex-grow: 1;
+    padding: 15px 45px 15px 15px; /* Adiciona padding à direita para o ícone */
     border: 2px solid var(--secondary-color);
     border-radius: 8px;
     font-size: 16px;
     box-sizing: border-box;
-    margin-bottom: 20px;
     background-color: var(--text-color);
     color: var(--text-secondary-color);
     transition: all 0.3s ease;
@@ -240,6 +247,67 @@ body {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+#filtro-toggle {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    color: var(--secondary-color);
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.conteudo.ativo #filtro-toggle {
+    color: var(--text-color);
+}
+
+#filtro-toggle:hover {
+    color: var(--primary-color);
+}
+
+.filtros {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    animation: slideDown 0.3s ease-in-out;
+}
+
+.filtros.ativo {
+    display: flex;
+}
+
+.filtro-opcao {
+    padding: 10px;
+    background-color: var(--text-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    color: var(--text-secondary-color);
+}
+
+.conteudo.ativo .filtro-opcao {
+    background-color: #4b6584;
+    color: var(--text-color);
+}
+
+.filtro-opcao:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .search-container button {
@@ -372,5 +440,16 @@ body {
         padding: 15px; /* Diminui o preenchimento interno */
         margin: 20px auto; /* Diminui a margem externa */
         max-width: 95%; /* Usa quase a largura total da tela */
+    }
+
+    .search-input-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #filtro-toggle {
+        position: static;
+        text-align: right;
+        margin-top: 10px;
     }
 }

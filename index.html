@@ -67,7 +67,14 @@
             <h2>Pesquisar Mensagens</h2>
             <div class="search-container">
                 <form id="formulario-pesquisa">
-                    <input type="text" id="campo-pesquisa" placeholder="Digite o nome para pesquisar..." required>
+                    <div class="search-input-wrapper">
+                        <input type="text" id="campo-pesquisa" placeholder="Digite o nome para pesquisar..." required>
+                        <i id="filtro-toggle" class="fa-solid fa-filter"></i>
+                    </div>
+                    <div id="filtros" class="filtros">
+                        <span class="filtro-opcao">Mais Recente</span>
+                        <span class="filtro-opcao">Mais Antigo</span>
+                    </div>
                     <button type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i> Pesquisar
                     </button>
