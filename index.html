@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correio Desel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <button class="botao-menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="menu-lateral">
+        <ul>
+            <li>
+                <a href="#enviar" class="menu-link">
+                    <i class="fa-solid fa-envelope"></i>
+                    Enviar
+                </a>
+            </li>
+            <li>
+                <a href="#pesquisar" class="menu-link">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Pesquisar
+                </a>
+            </li>
+            <li>
+                <a href="#info" class="menu-link">
+                    <i class="fa-solid fa-circle-info"></i>
+                    Info
+                </a>
+            </li>
+            <li>
+                <a href="#doar" class="menu-link">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    Doar
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="background"></div>
+
+    <main class="conteudo">
+        <div id="home-content" class="secao-conteudo ativo">
+            <h1>Correio Desel</h1>
+            <p>
+                Aqui você pode falar tudo de forma anonima no AIKINHA aproveite!!<br>
+                Esse site foi desenvolvido para gerar tretas mesmo e como o titulo ja diz, ser deselegante.<br>
+                Desfrute do melhor de nosso e ajude na discordia do aika kkkkkkkkkkkk.
+            </p>
+        </div>
+
+        <div id="enviar" class="secao-conteudo">
+            <h2>Enviar Mensagem Anônima</h2>
+            <div class="form-container">
+                <form id="formulario-anonimo">
+                    <textarea id="mensagem-anonima" placeholder="Escreva sua mensagem aqui..." rows="10" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="pesquisar" class="secao-conteudo">
+            <h2>Pesquisar Mensagens</h2>
+            <div class="search-container">
+                <form id="formulario-pesquisa">
+                    <input type="text" id="campo-pesquisa" placeholder="Digite o nome para pesquisar..." required>
+                    <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i> Pesquisar
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div id="info" class="secao-conteudo">
+            <div class="info-container">
+                <h2>Sobre o Correio Desel</h2>
+                <p>Este site foi criado por **Nikão** em um dia de tédio.</p>
+                <p>O objetivo principal é gerar discórdia no jogo, permitindo que os jogadores se comuniquem de forma anônima e deselegante, mantendo o espírito "tretístico" do jogo.</p>
+                <p>Além da zoeira, o projeto serve como uma forma de **treinar e aprimorar conhecimentos em programação**, combinando diversão e aprendizado.</p>
+                <p>Espero que aproveite o site e, claro, a discórdia! 😉</p>
+            </div>
+        </div>
+
+        <div id="doar" class="secao-conteudo">
+            <h2>Ajude o Correio Desel</h2>
+            <p>Apoie o site com uma doação via QR Code Pix. Toda ajuda é bem-vinda para manter a discórdia viva!</p>
+            <div class="qrcode-container">
+                <img src="sua-imagem-qrcode.png" alt="QR Code Pix para doação">
+            </div>
+        </div>
+    </main>
+</body>
+<script src="scripts.js"></script>
+</html>
